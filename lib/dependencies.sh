@@ -334,5 +334,6 @@ pnpm_node_modules() {
 }
 
 pnpm_prune_devdependencies() {
+  echo "Pruning pnpm"
   monitor "pnpm-prune" pnpm prune --prod
 }
