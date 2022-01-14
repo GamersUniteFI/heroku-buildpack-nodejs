@@ -332,3 +332,7 @@ pnpm_node_modules() {
   echo "Installing pnpm modules"
   monitor "pnpm-install" pnpm install --prod=false
 }
+
+pnpm_prune_devdependencies() {
+  monitor "pnpm-prune" pnpm prune --prod
+}
