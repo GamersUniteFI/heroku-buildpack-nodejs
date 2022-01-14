@@ -329,8 +329,6 @@ has_pnpm_lock() {
 }
 
 pnpm_node_modules() {
-  if [[ -f "$build_dir/pnpm-lock.yaml" ]]; then
-    echo "Installing pnpm modules"
-    monitor pnpm install
-  fi
+  echo "Installing pnpm modules"
+  monitor pnpm install
 }
