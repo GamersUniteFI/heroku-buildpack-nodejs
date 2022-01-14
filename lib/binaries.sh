@@ -143,3 +143,8 @@ install_npm() {
     echo "npm $version installed"
   fi
 }
+
+install_pnpm() {
+  echo "Install pnpm with npm"
+  npm install -g pnpm
+}

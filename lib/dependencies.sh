@@ -317,3 +317,20 @@ npm_prune_devdependencies() {
     meta_set "skipped-prune" "false"
   fi
 }
+
+has_pnpm_lock() {
+  local build_dir=${1:-}
+
+  if [[ -f "$build_dir/pnpm-lock.yaml" ]]; then
+    echo "true"
+  else
+    echo "false"
+  fi
+}
+
+pnpm_node_modules() {
+  if [[ -f "$build_dir/pnpm-lock.yaml" ]]; then
+    echo "Installing pnpm modules"
+    monitor pnpm install
+  fi
+}
