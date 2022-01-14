@@ -330,6 +330,5 @@ has_pnpm_lock() {
 
 pnpm_node_modules() {
   echo "Installing pnpm modules"
-  monitor "pnpm-install" pnpm install
-  monitor "pnpm-install-dev" pnpm install --dev
+  monitor "pnpm-install" pnpm install --prod=false
 }
